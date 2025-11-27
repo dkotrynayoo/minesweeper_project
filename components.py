@@ -68,7 +68,7 @@ class Board:
 
     def is_inbounds(self, col: int, row: int) -> bool:
         # TODO: Return True if (col,row) is inside the board bounds.
-        pass
+        return not (col < 0 or col >= self.cols or row < 0 or row >= self.rows) #False if it is outside
 
     def neighbors(self, col: int, row: int) -> List[Tuple[int, int]]:
         # TODO: Return list of valid neighboring coordinates around (col,row).
